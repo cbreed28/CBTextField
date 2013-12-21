@@ -109,12 +109,10 @@ static NSString * const kPhoneNumberValidatorRegex = @"^[1-9][0-9]{9}$";
     // For the password text field, let's use a predicate to do the validation
     [self.passwordTextField validateInputWithPredicate:^BOOL(NSString * input){
         
-        NSRange capitalizedRange = [input rangeOfCharacterFromSet:[NSCharacterSet capitalizedLetterCharacterSet]];
         NSRange letterRange = [input rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet]];
         NSRange decimalRange = [input rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]];
         
-        
-        return input.length > 6 && capitalizedRange.length > 0 && letterRange.length > 0 && decimalRange.length > 0;
+        return input.length > 6 && letterRange.length > 0 && decimalRange.length > 0;
         
     }error:nil];
     

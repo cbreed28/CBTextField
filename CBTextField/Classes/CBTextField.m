@@ -210,7 +210,7 @@ NSString * const CBTextFieldDidFailValidationNotification = @"com.CBTextField.Va
     self.text = @"";
     
     // Reset the border color back to the Normal Border color
-    self.layer.borderColor = self.CBTextFieldNormalBorderColor.CGColor;
+    [self animateBorderWithColor:self.CBTextFieldNormalBorderColor.CGColor];
     
     // Resign the first responder if the textfield is currently the first responder
     if([self isFirstResponder])
