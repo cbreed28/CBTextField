@@ -16,6 +16,12 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+    The CBtextFieldValidationStrategy Protocol is required of all objects that want to become
+    validation objects for the CBTextField. THe single method defines how each instance of this
+    protocol will validate its input.
+ */
+
 @protocol CBTextFieldValidationStrategy <NSObject>
 
 @required

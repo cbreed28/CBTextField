@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B9ECCC818653F4F001A172C /* CBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9F54D1864DA1600EECAEB /* CBTextField.m */; };
 		8BE9F5151864D94900EECAEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE9F5141864D94900EECAEB /* Foundation.framework */; };
 		8BE9F5171864D94900EECAEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE9F5161864D94900EECAEB /* CoreGraphics.framework */; };
 		8BE9F5191864D94900EECAEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE9F5181864D94900EECAEB /* UIKit.framework */; };
@@ -279,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9ECCC818653F4F001A172C /* CBTextField.m in Sources */,
 				8BE9F5431864D94900EECAEB /* CBTextFieldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +492,7 @@
 				8BE9F5481864D94900EECAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BE9F5491864D94900EECAEB /* Build configuration list for PBXNativeTarget "CBTextFieldDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +501,7 @@
 				8BE9F54B1864D94900EECAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

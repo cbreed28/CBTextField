@@ -38,24 +38,18 @@ typedef BOOL (^CBTextFieldValidationPredicate)(NSString * content);
 
 /**
  
- 'CBTextField' provides an easy to use way of validating user input to a UITextField. The validation of the input is handled by the Validation object. 
- The CBTextField also encapsulates the error border color, and the normal border color, and the success border color.
+ 'CBTextField' provides a way of validating user input to a UITextField. The validation of the input is handled by the Validation strategy or 
+ the validation predicate ( depending on which validation method is called ). The CBTextField also encapsulates the error border color, the
+ normal border color, and the success border color.
  
- ##Automatic Content Validation
- 
- The CBTextField will automatically validate it's content based on either the Strategy object, or the Strategy Predicate
- 
- The CBTextField provides a delegate pattern, notification, and bolck based API for performing the validation
- 
- Example Code:
- 
- {
- }
+ The CBTextField provides a delegate, block, and notification based API for retreiving information about the validation
  
  ##Subclassing Notes
  
- One should not have to make subclasses of the CBTextField object directly. To create new textfield validation styles, simply create a new validation strategy, define the appropriate colors
+ One should not have to make subclasses of the CBTextField object directly. To create new textfield validation styles, simply create a new validation strategy 
+ or a new predicate to validate the input. 
  
+ Please see the Attached Demo Project for example code on how to create validation strategies and predicates
  
  */
 
@@ -140,4 +134,7 @@ typedef BOOL (^CBTextFieldValidationPredicate)(NSString * content);
 -(void)reset;
 
 @end
+
+extern NSString * const CBTextFieldDidPassValidationNotification;
+extern NSString * const CBTextFieldDidFailValidationNotification;
 

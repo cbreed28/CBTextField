@@ -17,8 +17,9 @@
 #import "CBTextField.h"
 
 static NSString * const kCBTextFieldDomain = @"com.CBTextField";
-static NSString * const kCBTextFieldDidPassValidation = @"com.CBTextField.ValidationDidPass";
-static NSString * const kCBTextFieldDidFailValidation = @"com.CBTextField.ValidationDidFail";
+
+NSString * const CBTextFieldDidPassValidationNotification = @"com.CBTextField.ValidationDidPass";
+NSString * const CBTextFieldDidFailValidationNotification = @"com.CBTextField.ValidationDidFail";
 
 @implementation CBTextField
 
@@ -86,11 +87,6 @@ static NSString * const kCBTextFieldDidFailValidation = @"com.CBTextField.Valida
     self.CBTextFieldBorderTransitionSpeed = 0.350f;
     self.CBTextFieldBorderThickness = 0.5f;
     self.CBTextFieldBorderCornerRadius = 5.0f;
-    
-    // Initialize Layer
-//    self.layer.borderColor = self.CBTextFieldNormalBorderColor.CGColor;
-//    self.layer.borderWidth = self.CBTextFieldBorderThickness;
-//    self.layer.cornerRadius = self.CBTextFieldBorderCornerRadius;
 }
 
 #pragma mark - Public Interface Methods
@@ -326,10 +322,10 @@ static NSString * const kCBTextFieldDidFailValidation = @"com.CBTextField.Valida
 -(NSNotification *)getNotificationForValidationOutput:(BOOL)output
 {
     if(output) {
-        return [NSNotification notificationWithName:kCBTextFieldDidPassValidation object:nil];
+        return [NSNotification notificationWithName:CBTextFieldDidPassValidationNotification object:self];
     }
     
-    return [NSNotification notificationWithName:kCBTextFieldDidFailValidation object:nil];
+    return [NSNotification notificationWithName:CBTextFieldDidFailValidationNotification object:self];
 }
 
 #pragma mark - Animation Methods
@@ -346,8 +342,5 @@ static NSString * const kCBTextFieldDidFailValidation = @"com.CBTextField.Valida
         [self.layer addAnimation:borderAnimation forKey:@"borderColorAnimation"];
     }
 }
-
-
-#pragma mark - UITextField Overrides
 
 @end
