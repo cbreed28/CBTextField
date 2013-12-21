@@ -3,16 +3,16 @@ CBTextField
 
 The CBTextField class is a drop in replacement of the UITextField class, with the added ability to validate user input. 
 
-# Classes
+### Classes
 
-## CBTextField
+#### CBTextField
 
 UITextField replacement with additional support for validating user input
 
-# Documentation
+### Documentation
 Check out each header file for a complete listing of each method.
 
-# License
+### License
 
 Copyright 2013 Cory Breed
 
